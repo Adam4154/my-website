@@ -428,42 +428,6 @@
             font-size: 1.2rem;
         }
 
-        .contact-form {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-
-        .form-group {
-            margin-bottom: 1.5rem;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 0.5rem;
-            font-weight: 500;
-        }
-
-        .form-control {
-            width: 100%;
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 1rem;
-            transition: border 0.3s ease;
-        }
-
-        .form-control:focus {
-            border-color: var(--primary);
-            outline: none;
-        }
-
-        textarea.form-control {
-            min-height: 150px;
-            resize: vertical;
-        }
-
         /* Footer */
         footer {
             background: var(--dark);
@@ -628,6 +592,26 @@
             color: var(--gray);
         }
 
+        /* Timeline Content Styling */
+        .timeline-media {
+            margin: 1.5rem 0;
+        }
+
+        .timeline-media img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1rem;
+        }
+
+        .timeline-videos {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            margin: 1.5rem 0;
+        }
+
         /* Responsive Design */
         @media (max-width: 768px) {
             .mobile-menu-btn {
@@ -705,7 +689,7 @@
                 <button class="mobile-menu-btn">
                     <i class="fas fa-bars"></i>
                 </button>
-
+ <p><strong><em>IoT Project</em></strong></p>
             </div>
         </div>
     </header>
@@ -808,7 +792,8 @@
                                processing unit, receiving, processing, and sending commands to control the fan and lamp throughout light amount, switching
                                on/off (Relay1 pin) Lamp and servo motor (as window controller) according to the brightness or darkness. It tells (Relay2 pin) fan to be on/off according
                                to the temperature sensed inside the room. According to the ultrasonic sensor data collected it turns led white/led red on/off when any obstacle detected.
-                            After all we have monitoring system to show us needed information and help us for maintenance.</p>
+                            After all we have monitoring system to show us needed information and help us for maintenance. In additional all  processes are automatically but we can control them
+                        throughout Adafruit IO dashboard</p>
                     </div>
                 </div>
                 <div class="step">
@@ -849,6 +834,7 @@
                              remotely via MQTT commands to Adafruit IO.</p>
                         <div style="margin-top: 1rem;">
                             <a href="https://io.adafruit.com" class="external-link" target="_blank">Adafruit IO</a>
+                            <p><strong><em>Visit adafruit IO website</em></strong></p>
                         </div>
                     </div>
                 </div>
@@ -996,7 +982,7 @@
         <div class="container">
             <div class="section-title">
                 <h2>Documentation of Work Progress</h2>
-                <p>Our journey from concept to implementation</p>
+                <p><strong>Our journey from concept to implementation</strong></p>
             </div>
             
             <div class="timeline">
@@ -1006,6 +992,7 @@
                         <p>Defined project scope, researched components, and created 
                             initial system architecture with ultrasonic security.</p>
                         <p><strong>Duration:</strong> Week 1</p>
+                        
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -1014,6 +1001,16 @@
                         <p>Procured all necessary components including HC-SR04 
                             ultrasonic sensor and tested each one individually.</p>
                         <p><strong>Duration:</strong> Week 2</p>
+
+                    <div class="video-container">
+                    <h4>Testing compnents </h4>
+                        <video width="720" height="720" controls>
+                        <source src="vid/running but not controlled.mp4" type="video/mp4">
+                        </video>
+                        <p>Here we were facing the issues of the system to work but not controlled via 
+                        Adafruit. Besides the publish tasks were well done the problem was remote Controlling and Testing 
+                        components.</p>
+                </div>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -1022,6 +1019,34 @@
                         <p>Created circuit diagrams with ultrasonic sensor integration
                              and assembled the hardware components.</p>
                         <p><strong>Duration:</strong> Week 3</p>
+                        <br><br>
+                        <div class="timeline-media">
+                            <img src="img/121.jpg" alt="">
+                            <p>Assembling components</p>
+                            <img src="img/before (2).jpg" alt="">
+                            <p>Building up the layout</p>
+                            <img src="img/127.jpg" alt="">
+                            <p>The final layout</p>
+                        </div>
+                        <br><br>
+                        
+                         <div class="timeline-videos">
+                             <div class="video-container">
+                                 <h3>Layout of the Project Sample</h3>
+                                 <video controls>
+                                  <source src="vid/Layout.mp4" type="video/mp4">
+                                 </video>
+                                 <p>Wire Connecting and Front Layout</p>
+                             </div>
+                            <div class="video-container">
+                                 <h3>System not working</h3>
+                              <video controls>
+                                 <source src="vid/not working.mp4" type="video/mp4">
+                              </video>
+                               <p>Here we were facing the issues of the system to not working whole 
+                               part correctly as we were expecting</p>
+                             </div>
+                         </div>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -1029,7 +1054,57 @@
                         <h3>Software Development</h3>
                         <p>Developed Arduino code for sensor reading, ultrasonic security 
                             logic, automation, and MQTT communication.</p>
-                        <p><strong>Duration:</strong> Week 4</p>
+                        <p><strong>Duration:</strong> Week 4</p><br><br>
+
+                        <!-- images after developing software -->
+                         <div class="components-grid">
+                             <div class="component-content">
+                                 <div class="component-img">
+                                    <img src="img/Screenshot (11).png" alt="Arduino IDE">
+                                 </div>
+                                 <div class="component-content">
+                                    <h3>Codes in Arduino IDE</h3>
+                                  <p>Codes in Arduino before compiling and uploading.</p>
+                                 </div>
+                              </div>  
+                             <div class="component-content">
+                                 <div class="component-img">
+                                   <img src="img/Screenshot (10).png" alt="Uploading">
+                                 </div>
+                                 <div class="component-content">
+                                    <h3>Uploading Done</h3>
+                                   <p>Compiling and uploading the Arduino codes into microcontroller.</p>
+                                 </div>
+                             </div>
+                             <div class="component-content">
+                                 <div class="component-img">
+                                     <img src="img/adafruit.PNG" alt="Adafruit Dashboard">
+                                  </div>
+                                 <div class="component-content">
+                                  <h3>Adafruit IO Dashboard</h3>
+                                   <p>Controlling system on the dashboard as IoT.</p>
+                                 </div>
+                              </div>
+                         </div>
+                          <br><br>
+                          <!-- video for software develop -->
+                 <div class="timeline-videos">
+                    <div class="video-container">
+                        <h3>Uploading Failed</h3>
+                        <video controls>
+                            <source src="vid/error occured.mp4" type="video/mp4">
+                        </video>
+                        <p>Errors occurred while we were uploading in microcontroller</p>
+                    </div>
+                    
+                    <div class="video-container">
+                        <h3>Uploading Done</h3>
+                        <video controls>
+                            <source src="vid/uploading done.mp4" type="video/mp4">
+                        </video>
+                        <p>Uploading Arduino codes in ESP32 microcontroller was successfully done</p>
+                    </div>
+                 </div>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -1037,7 +1112,15 @@
                         <h3>Integration & Testing</h3>
                         <p>Integrated hardware and software components, tested 
                             ultrasonic security system, and debugged issues.</p>
-                        <p><strong>Duration:</strong> Week 5</p>
+                        <p><strong>Duration:</strong> Week 5</p><br><br>
+                <div class="video-container">
+                    <h4>PROJECT OUTPUT HALF-RUNNING</h4>
+                        <video width="720" height="720" controls>
+                        <source src="vid/running but not controlled.mp4" type="video/mp4">
+                        </video>
+                        <p>Here we were facing the issues of the system to work but not controlled via 
+                        Adafruit. Besides the publish tasks were well done the problem was remote Controlling.</p>
+                </div>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -1116,29 +1199,12 @@
                     <i class="fab fa-github"></i> View Full Code on GitHub
                 </a>
                 <p style="margin-top: 1.5rem; font-size: 0.9rem;">
-                    <em>Note: Replace the GitHub link above with your actual repository URL</em>
+                    <em>The complete source code is available on GitHub.</em>
                 </p>
             </div>
         </div>
     </section>
 
-    <!-- Project Demonstration Section -->
-    <section id="demo">
-        <div class="container">
-            <div class="section-title">
-                <h2>Project Demonstration</h2>
-                <p>See our Smart Room Control System in action</p>
-            </div>
-            <div class="video-container">
-                <h3>PROJECT OUTPUT HALF-RUNNING</h3>
-                <video width="720" height="720" controls>
-                    <source src="vid/running but not controlled.mp4" type="video/mp4">
-                </video>
-                <p>Here we were facing the issues of the system to work but not controlled via 
-                    Adafruit. Besides the publish tasks were well done the problem was remote Controlling.</p>
-            </div>
-        </div> 
-    </section>
 
     <!-- Behind The Scenes Section -->
     <section id="behind" style="background-color: var(--bg-light);">
@@ -1175,33 +1241,7 @@
                         <p>Connecting Hardware before embedding the firmware.</p>
                     </div>
                 </div>
-                <div class="component-card">
-                    <div class="component-img">
-                        <img src="img/Screenshot (11).png" alt="Arduino IDE">
-                    </div>
-                    <div class="component-content">
-                        <h3>Codes in Arduino IDE</h3>
-                        <p>Codes in Arduino before compiling and uploading.</p>
-                    </div>
-                </div>  
-                <div class="component-card">
-                    <div class="component-img">
-                        <img src="img/Screenshot (10).png" alt="Uploading">
-                    </div>
-                    <div class="component-content">
-                        <h3>Uploading Done</h3>
-                        <p>Compiling and uploading the Arduino codes into microcontroller.</p>
-                    </div>
-                </div>
-                <div class="component-card">
-                    <div class="component-img">
-                        <img src="img/adafruit.PNG" alt="Adafruit Dashboard">
-                    </div>
-                    <div class="component-content">
-                        <h3>Adafruit IO Dashboard</h3>
-                        <p>Controlling system on the dashboard as IoT.</p>
-                    </div>
-                </div>
+
             </div>
         </div>
     </section>
@@ -1303,8 +1343,9 @@
                         <div>
                             <h3>BIZIMANA Adam</h3>
                             <p>Project Lead</p>
-                            <p>Email: kingnur4154@gmail.com</p>
-                            <p>Phone: +250 796 235 081</p>
+                            <p><strong><em>Email:</em></strong> kingnur4154@gmail.com</p>
+                            <p><strong><em>Email:</em></strong> kingnurbenjo1@gmail.com</p>
+                            <p><strong><em>Phone: </em></strong>+250 796 235 081</p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -1314,8 +1355,8 @@
                         <div>
                             <h3>DUKUNDWANIMANA Bien Aimee Providence</h3>
                             <p>Software Developer</p>
-                            <p>Email: prvaimee6@gmail.com</p>
-                            <p>Phone: +250 792 053 499</p>
+                            <p><strong><em>Email:</em></strong> prvaimee6@gmail.com</p>
+                            <p><strong><em>Phone:</em></strong>+250 792 053 499</p>
                         </div>
                     </div>
                     <div class="contact-item">
@@ -1328,8 +1369,6 @@
                         </div>
                     </div>
                 </div>
-                
-                <!-- Contact form removed as requested -->
             </div>
         </div>
     </section>
